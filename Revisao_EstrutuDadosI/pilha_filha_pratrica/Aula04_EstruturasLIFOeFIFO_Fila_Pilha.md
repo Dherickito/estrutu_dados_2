@@ -68,16 +68,16 @@ class SpoolerImpressao:
     def enfileirar(self, documento):
         \"\"\"Adiciona um novo documento no final da fila.\"\"\"
         self.fila.append(documento)
-        print(f"📥 Documento recebido: '{documento}' (Aguardando...)")
+        print(f" Documento recebido: '{documento}' (Aguardando...)")
 
     def imprimir(self):
         \"\"\"Imprime e remove o documento mais antigo (FIFO).\"\"\"
         if len(self.fila) > 0:
             # popleft() tira o primeirão da fila
             doc_atual = self.fila.popleft()
-            print(f"🖨️ Imprimindo agora: '{doc_atual}'")
+            print(f" Imprimindo agora: '{doc_atual}'")
         else:
-            print("📭 Fila vazia! Nada para imprimir no momento.")
+            print(" Fila vazia! Nada para imprimir no momento.")
 
     def ver_fila(self):
         \"\"\"Mostra como a fila está no momento.\"\"\"
@@ -99,13 +99,13 @@ impressora.imprimir() # Vai imprimir o Boleto
 impressora.ver_fila() # Vai mostrar que só sobrou o Resumo
 
 **Saída esperada:**
-📥 Documento recebido: 'Trabalho_de_Sistemas.pdf' (Aguardando...)
-📥 Documento recebido: 'Boleto_Faculdade.pdf' (Aguardando...)
-📥 Documento recebido: 'Resumo_Provas.docx' (Aguardando...)
+ Documento recebido: 'Trabalho_de_Sistemas.pdf' (Aguardando...)
+ Documento recebido: 'Boleto_Faculdade.pdf' (Aguardando...)
+ Documento recebido: 'Resumo_Provas.docx' (Aguardando...)
 
 --- Iniciando os trabalhos ---
-🖨️ Imprimindo agora: 'Trabalho_de_Sistemas.pdf'
-🖨️ Imprimindo agora: 'Boleto_Faculdade.pdf'
+ Imprimindo agora: 'Trabalho_de_Sistemas.pdf'
+ Imprimindo agora: 'Boleto_Faculdade.pdf'
 Fila atual: ['Resumo_Provas.docx']
 
 ---
